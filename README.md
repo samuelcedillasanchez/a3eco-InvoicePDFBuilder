@@ -1,28 +1,49 @@
-# a3eco-FacturaPDFBuilder
-Archivo Excel con macros para extraer automáticamente los documentos insertados en el libro de facturas y consolidarlos en un único PDF ordenado según el registro.
+# 📊 a3eco Invoice PDF Builder
 
-✅ Instrucciones de uso
-1. Preparación de archivos
-Sacar una copia de seguridad de las facturas desde A3ECO.
-Copiar la carpeta FACTURAS y el archivo Excel generado en la ruta: \A3\A3ECO\EMP
-Luego, pegar esa misma carpeta FACTURAS y el archivo Excel en la carpeta: REQAEAT
+[![VBA](https://img.shields.io/badge/Language-VBA%20%2F%20Macro-green?logo=microsoft-excel&logoColor=white)](#)
+[![Automation](https://img.shields.io/badge/Focus-Process%20Automation-blue)](#)
 
-2. Generación automática del PDF
-Abre el archivo Excel y habilita las macros.
-El archivo detectará los documentos insertados (facturas escaneadas) y generará automáticamente un único archivo PDF con todos los documentos ordenados.
+> **Stable Version Download:** You can download the ready-to-use Excel workbook from the [Releases](https://github.com/samuelcedillasanchez/a3eco-InvoicePDFBuilder/releases) section.
 
-🛠 Requiere: PDFtk instalado para combinar los PDFs.
+An Excel utility powered by VBA (Visual Basic for Applications) designed to automatically extract scanned invoice files embedded within the a3eco ledger and compile them into a single, chronologically sorted PDF document according to accounting records.
 
+---
 
+##  Key Features
 
-🧭 Uso manual con botones (opcional)
-En caso de que haya más de una actividad o prefieras realizar el proceso de forma controlada, puedes usar los 3 botones disponibles en el Excel.
-Convertir TIF a PDF: Convierte los archivos escaneados en formato .tif a .pdf.
-Reemplazar nombres: Cambia los nombres de los archivos PDF según los datos del libro de facturas.
-Combinar PDFs en orden: Une todos los PDFs generados en un único archivo PDF, respetando el orden del libro de facturas.
+* ** Automated PDF Consolidation:** Automatically identifies and merges embedded source documents (scanned invoices) into a standardized bookkeeping ledger package.
+* ** Format Normalization:** Built-in routine to convert Legacy image formats (`.tif`) into standard web-ready documents (`.pdf`).
+* ** Dynamic File Renaming:** Automatically remaps and overwrites filename strings based on the structural criteria of the a3eco billing logs.
+* ** Operational Efficiency:** Built-in modular control pipeline allowing complete execution with a single macro trigger or a 3-step structured manual process.
 
-📌 Para usar esta opción, simplemente cambia los datos en el libro de facturas (según la actividad deseada) y ejecuta los botones en orden.
+##  Prerequisites
 
+* **PDFtk Server:** This tool requires the **PDFtk** binary utility installed and configured in the system environment path to execute the command-line PDF compilation routines.
 
+##  How to Use
 
-⚠️ Importante Este Excel está optimizado para empresas con menos de 3.000 facturas, para evitar problemas de rendimiento. Si el número de registros supera los 3.000: Deberás extender manualmente las fórmulas de las columnas N, O y P.
+### 1. Environment Preparation
+1. Export your billing backup files directly from the **a3eco** system.
+2. Move the generated `FACTURAS` folder and this Excel automation file into the local deployment directory path: `\A3\A3ECO\EMP`
+3. Duplicate and paste both resources into the regulatory submission directory: `REQAEAT`
+
+### 2. Automated Pipeline Execution
+1. Open the Excel workbook and **enable Macros**.
+2. The program will automatically run background data parsing routines to audit embedded files, resolve matching references, and invoke PDFtk to compile a consolidated, sorted master PDF document.
+
+###  Manual Step-by-Step Control (Optional)
+If your accounting workspace manages multiple business activities or you prefer a granular execution, you can trigger the 3 structural action buttons available in the layout sequence:
+1. **Convert TIF to PDF:** Launches the asynchronous image transformation pipeline.
+2. **Replace Filenames:** Renames every single PDF file mapping the reference data extracted from the accounting ledger columns.
+3. **Merge PDFs in Order:** Invokes the PDFtk backend to consolidate all individual documents while strictly respecting the indexing sequence.
+
+>  *To apply this workflow to alternative scopes, simply update the lookup criteria rows inside the Excel sheet data structure and run the control buttons sequentially.*
+
+##  Performance & Scalability Constraints
+
+* This utility architecture is highly optimized for business records containing **fewer than 3,000 invoices** to prevent local Excel runtime bottlenecks or thread suspension.
+* **Scale Up Exception:** If the targeted enterprise logging registers scale past the 3,000 limit, you must manually extend down the calculation formula cells mapped in columns **N, O, and P**.
+
+---
+
+*Designed and coded with 💻 by Samuel Cedilla Sánchez.*
